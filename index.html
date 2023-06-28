@@ -1,0 +1,109 @@
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rhys ツ">
+<meta property="og:description" content="Rx7 in here!!!">
+<meta property="og:image" content="logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Rhys ツ</title>
+<link rel="icon" href="logo.ico">
+
+<style>
+    * {
+        font-family: 'Courier New', monospace;
+    }
+
+    html,body {
+        background-color: #000;
+    }
+
+    #overlay {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+        z-index: 100;
+        background-color: #000;
+    }
+
+    #overlay span {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+
+    #main {
+        z-index: 50;
+
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #main * {
+        text-align: center;
+    }
+
+    #main #content {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-shadow: 1px 1px #000;
+    }
+
+    #myvideo {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        object-fit: fill;
+    }
+
+    a {
+        color: white;
+    }
+
+    #logo {
+        font-size: 23pt;
+    }
+</style>
+<div id="main">
+    <div id="content">
+        <span id="logo">Rhys ツ</span><br>
+        <span>
+            <a href="">18 y/o web dev</a>
+        </span>
+        <br>
+        <br>
+        <a href="https://www.tiktok.com/@ir2hys">TikTok</a>
+        </br>
+        <br>
+        <a href="https://open.spotify.com/user/r9rai13h5uackunx2eaevqvnj?si=fc955399314a4fc0">Spotify</a>
+        </br>
+        
+
+        <pre> More to come...</pre>
+    </div>
+</div>
+
+<video id="myvideo" onloadstart="this.volume=0.2" autoplay loop>
+    <source src="video/video.mp4" type="video/mp4">
+</video>
+
+<script>
+    window.onload = () => {
+        myvideo.onplay = () => {
+            window.overlay.remove();
+        }
+    }
+</script>
+<div id="overlay" onclick="myvideo.play();">
+    <span>[Click me :)]</span>
+</div>
